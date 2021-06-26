@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Card;
+use App\Models\DeskList;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CardFactory extends Factory
@@ -23,6 +24,8 @@ class CardFactory extends Factory
     {
         return [
             //
+            'name' => $this->faker->name(),
+            'desk_list_id'=>self::factoryForModel(DeskList::class),
         ];
     }
 }

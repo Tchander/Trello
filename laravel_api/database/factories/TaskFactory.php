@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Task;
+use App\Models\Card;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TaskFactory extends Factory
@@ -23,6 +24,8 @@ class TaskFactory extends Factory
     {
         return [
             //
+            'name' => $this->faker->name(),
+            'card_id' => self::factoryForModel(Card::class),
         ];
     }
 }
