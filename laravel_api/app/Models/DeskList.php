@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class DeskList extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name'];
+
+    public function lists()
+    {
+        return $this->hasMany(Card::class);
+    }
 }

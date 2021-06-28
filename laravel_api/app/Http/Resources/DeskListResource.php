@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Card;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class DeskListResource extends JsonResource
@@ -18,6 +19,7 @@ class DeskListResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'created_at' => $this->created_at,
+            'lists' => CardResource::collection($this->lists)
         ];
     }
 }

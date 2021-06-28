@@ -24,8 +24,9 @@ class DeskListFactory extends Factory
     {
         return [
             //
-            'name'=>$this->faker->name(),
-            'desk_id'=>self::factoryForModel(Desk::class),
+            'name'=>$this->faker->sentence(3),
+            'desk_id'=>Desk::factory(),
+//            'desk_id'=>self::factoryForModel(Desk::class),
         ];
     }
 }

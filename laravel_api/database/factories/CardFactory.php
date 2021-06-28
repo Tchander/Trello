@@ -24,8 +24,9 @@ class CardFactory extends Factory
     {
         return [
             //
-            'name' => $this->faker->name(),
-            'desk_list_id'=>self::factoryForModel(DeskList::class),
+            'name' => $this->faker->sentence(3),
+            'desk_list_id'=>DeskList::factory(),
+//            'desk_list_id'=>self::factoryForModel(DeskList::class),
         ];
     }
 }

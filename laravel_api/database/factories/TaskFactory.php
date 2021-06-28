@@ -24,8 +24,9 @@ class TaskFactory extends Factory
     {
         return [
             //
-            'name' => $this->faker->name(),
-            'card_id' => self::factoryForModel(Card::class),
+            'name' => $this->faker->sentence(5),
+            'card_id' => Card::factory(),
+//            'card_id' => self::factoryForModel(Card::class),
         ];
     }
 }
